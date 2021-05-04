@@ -1,3 +1,6 @@
+# womens-hackathon-2021
+Repo that holds our project for the All Womens Virtual Hackathon 2021. 
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -32,3 +35,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Contribution Guidelines 
+Here are the steps to contribute to this projects code base. 
+1. Clone the repo 
+2. Make sure you have the latest version of master and then checkout to a feature branch. Note: Try to name your branch something descriptive of what you will be building. ie: `bug/fix-site-crash-on-dropdown-click` or `feature/user-authentication` 
+3. Begin work on your task. 
+4. When work is done submit and MR for review. 
+5. After approval can merge in. 
