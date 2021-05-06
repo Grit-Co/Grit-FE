@@ -1,16 +1,20 @@
-# womens-hackathon-2021
-Repo that holds our project for the All Womens Virtual Hackathon 2021. 
+# GRIT
+Repo that holds our project, Grit for the All Womens Virtual Hackathon 2021. 
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The motivation behind Grit is, to help women grow in their careers by defining career goals, defining ways to achieve those goals, tracking their progress/career milestones, and connecting them with women who have similar goals so that they can support each other to achieving their goals.
 
-## Getting Started
 
-First, run the development server:
+## Running locally
+
+First, clone the repo: 
+```bash
+git clone https://github.com/cmatson93/womens-hackathon-2021.git 
+```
+Install dependencies and run the development server:
 
 ```bash
+npm install 
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

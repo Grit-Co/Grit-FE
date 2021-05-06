@@ -1,40 +1,51 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import styles from '../styles/Home.module.scss'
+import Button from '../src/components/Button'
 
 import { useUser } from '@auth0/nextjs-auth0';
 
 export default function Home() {
 
   const { user, error, isLoading } = useUser();
-  console.log(user)
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>{error.message}</div>;
 
-  // if (user) {
-  //   return (
-  //     <a href="/api/auth/login">Login</a>
-  //     <a href="/api/auth/logout">Logout</a>
-  //   )
-  // }
-
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       {
         user ? 
           <main className={styles.main}>
             <h1 className={styles.title}>
-              Welcome to Grit!
+              Welcome to the <span>GRIT</span> community!
             </h1>
           
             <p className={styles.description}>
-              Get started crushing your goals!{' '}
+              We are excited to see you define goals and connect 
+              with women who will help you grow into the woman 
+              that you were meant to be.
             </p>
-            <a href="/api/auth/logout">Logout</a>
+
+            <h3>
+              Are you ready to set your first goal? 
+            </h3>
+
+            <Link
+              href='/setup'
+            >
+              <a className={styles['primary-link']}>Set Goal</a>
+            </Link>
+            {/* <Link
+              className={styles['secondary-link']}
+              href='/'
+            >
+              <a>Skip</a>
+            </Link> */}
+            <Button 
+              text='Skip'
+              isPrimary={false}
+            />
+            {/* <a href="/api/auth/logout">Logout</a> */}
           </main>
         : 
         <a href="/api/auth/login">Login</a>

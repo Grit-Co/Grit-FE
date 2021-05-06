@@ -1,0 +1,22 @@
+@import './global/palatte';
+
+.primary {
+    background: $purple;
+   
+    color: $white;   
+}
+
+.secondary {
+    color: $main-black;
+    background: none;
+}
+
+.btn {
+    border-radius: 48px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    border: none;
+}
