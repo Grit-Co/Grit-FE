@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
 import Button from '../src/components/Button'
+import Image from 'next/image'
 
 import { useUser } from '@auth0/nextjs-auth0';
 
@@ -48,7 +49,26 @@ export default function Home() {
             {/* <a href="/api/auth/logout">Logout</a> */}
           </main>
         : 
-        <a href="/api/auth/login">Login</a>
+        <main className={styles.main}>
+          <h1 className={styles.title}>
+              <span>GRIT</span> <br/>
+              Empowering you to be your best.
+          </h1>
+        <Image
+          src="/slash.png"
+          alt="Picture of the author"
+          width={500}
+          height={500}
+        />
+          <a href="/api/auth/login">Login</a>
+          <div className={styles.footer}>
+            <p>Don't have an account?</p>
+            <Button 
+              text='Sign up'
+              isPrimary={false}
+            />
+          </div>
+        </main>
       }
     </div>
   )
