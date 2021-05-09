@@ -1,7 +1,7 @@
 import Plus from '../src/icons/Plus'
 import Title from '../src/components/Title';
 import SectionHeader from '../src/components/SectionHeader'
-import styles from '../styles/goals.module.scss'
+import styles from '../styles/community.module.scss'
 
 export default function Community() {
 
