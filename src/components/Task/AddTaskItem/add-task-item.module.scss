@@ -1,0 +1,15 @@
+@import '../../../../styles/global/palatte';
+
+.taskItem {
+    height: 54px;
+    width: 100%;
+    padding: 19px 18px 19px 16px;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 10%);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold; 
+    color: $main-black;
+    font-size: 14px;
+    line-height: 16px;
+}

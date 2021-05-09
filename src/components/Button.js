@@ -12,7 +12,7 @@ const Button = ({
                 : 
                 `${styles.secondary} ${styles.btn}`
         }
-        onClick={() => onClick(e)}
+        onClick={() => onClick()}
     >
         {text ? text : 'Click me'}
     </button>

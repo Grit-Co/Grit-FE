@@ -1,0 +1,12 @@
+@import '../../../styles/global/palatte';
+
+.sectionHeader {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: $main-black;
+}
+
+.sectionHeader span {
+    margin-right: 8px;
+}

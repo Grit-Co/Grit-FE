@@ -2,6 +2,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.scss'
 import Button from '../src/components/Button'
 import Image from 'next/image'
+import Head from 'next/head';
 
 import { useUser } from '@auth0/nextjs-auth0';
 
@@ -13,7 +14,14 @@ export default function Home() {
   if (error) return <div>{error.message}</div>;
 
   return (
-    <div className={styles.container}>
+    <>
+      <Head>
+        <title>Grit</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"/>
+      </Head>
+      <div className={styles.container}>
       {
         user ? 
           <main className={styles.main}>
@@ -46,7 +54,7 @@ export default function Home() {
               text='Skip'
               isPrimary={false}
             />
-            {/* <a href="/api/auth/logout">Logout</a> */}
+            <a href="/api/auth/logout">Logout</a>
           </main>
         : 
         <main className={styles.main}>
@@ -71,5 +79,6 @@ export default function Home() {
         </main>
       }
     </div>
+    </>
   )
 }

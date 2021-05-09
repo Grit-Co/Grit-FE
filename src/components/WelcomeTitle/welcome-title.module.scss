@@ -1,0 +1,15 @@
+@import '../../../styles/global/palatte';
+
+.welcomeTitle {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 36px;
+}
+
+.welcomeTitle h1 {
+    color: $main-black;
+}
+
+.welcomeTitle span {
+    color: $purple;
+}
