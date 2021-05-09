@@ -1,0 +1,10 @@
+@import '../../../styles/global/palatte';
+
+.container {
+    border-top: 12px solid $off-white;
+}
+.container .actionContainer {
+    height: 44px;
+    display: flex;
+    border-top: 1px solid $medium-grey;
+}

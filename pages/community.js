@@ -1,6 +1,7 @@
 import Plus from '../src/icons/Plus'
 import Title from '../src/components/Title';
 import SectionHeader from '../src/components/SectionHeader'
+import FooterNav from '../src/components/FooterNav'
 import styles from '../styles/community.module.scss'
 
 export default function Community() {
@@ -16,6 +17,7 @@ export default function Community() {
                 </div>
                 <SectionHeader section='pod' text='Your Communities' />
             </main>
+            <FooterNav />
         </div>
     )
 }

@@ -2,7 +2,9 @@ import User from '../src/icons/User'
 import Plus from '../src/icons/Plus'
 import Title from '../src/components/Title';
 import SectionHeader from '../src/components/SectionHeader'
-import styles from '../styles/goals.module.scss'
+import StatusUpdate from '../src/components/StatusUpdate'
+import styles from '../styles/pod.module.scss'
+import FooterNav from '../src/components/FooterNav'
 
 export default function Pod() {
 
@@ -17,7 +19,9 @@ export default function Pod() {
                     </div>
                 </div>
                 <SectionHeader section='pod' text='Your Pod' />
+                <StatusUpdate />
             </main>
+            <FooterNav />
         </div>
     )
 }

@@ -1,0 +1,28 @@
+@import '../styles/global/palatte';
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container main .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+}
+
+.header svg {
+    margin-top: 21px;
+    margin-right: 20px;
+}
+
+.completedGoals {
+    margin-top: 52px;
+}
