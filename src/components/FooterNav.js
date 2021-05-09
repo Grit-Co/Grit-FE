@@ -8,23 +8,23 @@ import Users from '../icons/Users'
 import styles from '../../styles/components/footernav.module.scss'
 import { useRouter } from 'next/router'
 
-const FooterNav = ({ currentTab='home', handleTabSelect }) => {
+const FooterNav = ({ handleTabSelect }) => {
     const router = useRouter()
-
+    const currentTab = router.route.substring(1);
     const setIconComponent = (tab) => {
         switch (tab) {
-            case 'home':
-                return <Home/>
+            case 'dashboard':
+                return <Home selected={currentTab === tab} />
             case 'goals':
-                return <Star/>
+                return <Star selected={currentTab === tab} />
             case 'pod':
-                return <Chat/>
+                return <Chat selected={currentTab === tab} />
             case 'community':
-                return <Home/>
+                return <Users selected={currentTab === tab} />
             case 'more':
-                return <Users />
+                return <Kebab selected={currentTab === tab} />
             default:
-                return <Kebab/>
+                return <Kebab selected={currentTab === tab} />
         }
     }
     
@@ -32,7 +32,7 @@ const FooterNav = ({ currentTab='home', handleTabSelect }) => {
         {
             id: 1,
             text: "Home",
-            tab: "home"
+            tab: "dashboard"
         },
         {
             id: 2,
@@ -55,17 +55,12 @@ const FooterNav = ({ currentTab='home', handleTabSelect }) => {
             tab: "more"
         },
     ]
-    
+
     return (
         <nav className={styles.container}>
             {
                 tabs.map(tab => {
                     const icon = setIconComponent(tab.tab)
-                    switch(tab.tab){
-                        case "home": {
-                            
-                        }
-                    }
                     return (
                         <NavItem text={tab.text} selected={currentTab === tab.tab} handleTabSelect={handleTabSelect}>
                             <NavLink href={tab.tab}>
