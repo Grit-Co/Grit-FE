@@ -1,10 +1,10 @@
-import User from '../src/icons/User'
+import FooterNav from '../src/components/FooterNav'
 import Plus from '../src/icons/Plus'
-import Title from '../src/components/Title';
 import SectionHeader from '../src/components/SectionHeader'
 import StatusUpdate from '../src/components/StatusUpdate'
+import Title from '../src/components/Title';
+import User from '../src/icons/User'
 import styles from '../styles/pod.module.scss'
-import FooterNav from '../src/components/FooterNav'
 
 export default function Pod() {
     const updates = [
