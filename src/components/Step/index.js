@@ -1,5 +1,5 @@
 import ListItem from "../List/ListItem";
-import styles from '../../../styles/setup.module.scss'
+import styles from './step.module.scss'
 import Button from "../Button";
 
 const Step = ({ step, handleNextClick }) => {
@@ -48,19 +48,21 @@ const Step = ({ step, handleNextClick }) => {
     ];
 
     return (
-        <div >
-            <h3>{stepObj[step].title}</h3>
-            {
-                step === 1 ? 
-                    <ul className={styles.content}>
-                        {
-                            categories.map(cat => 
-                                <ListItem key={cat}>{cat}</ListItem>
-                            )
-                        }
-                    </ul>
-                    : <textarea />
-            }
+        <div className={styles.container}>
+            <div className={styles.content}>
+                <h3>{stepObj[step].title}</h3>
+                {
+                    step === 1 ? 
+                        <ul className={styles.content}>
+                            {
+                                categories.map(cat => 
+                                    <ListItem key={cat}>{cat}</ListItem>
+                                )
+                            }
+                        </ul>
+                        : <textarea />
+                }
+            </div>
             <Button 
                 text={step === 1 ? 'Select' : 'Next'} 
                 onClick={handleNextClick}

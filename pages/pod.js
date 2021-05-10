@@ -10,7 +10,8 @@ export default function Pod() {
     const updates = [
         {
             id: '1',
-            userName: 'Lisa White',
+            img: 'christina',
+            userName: 'Christina Ng',
             date: 'Today at 3:53 PM',
             status: 'Completed a Task!',
             updateItem: 'Read 1 chapter of book',
@@ -18,6 +19,7 @@ export default function Pod() {
         },
         {
             id: '2',
+            img: 'yumeng',
             userName: 'Yumeng Luo',
             date: 'Today at 6:52 PM',
             status: 'Completed a Goal!',
@@ -26,7 +28,8 @@ export default function Pod() {
         },
         {
             id: '3',
-            userName: 'Christina Ng',
+            img: 'dianne',
+            userName: 'Dianne Young',
             date: 'Today at 3:53 PM',
             status: 'Completed a Task!',
             updateItem: 'Read 1 chapter of book',

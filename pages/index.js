@@ -44,17 +44,11 @@ export default function Home() {
             >
               <a className={styles['primary-link']}>Set Goal</a>
             </Link>
-            {/* <Link
-              className={styles['secondary-link']}
-              href='/'
-            >
-              <a>Skip</a>
-            </Link> */}
             <Button 
               text='Skip'
               isPrimary={false}
             />
-            <a href="/api/auth/logout">Logout</a>
+            {/* <a href="/api/auth/logout">Logout</a> */}
           </main>
         : 
         <main className={styles.main}>

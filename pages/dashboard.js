@@ -41,7 +41,7 @@ export default function Dashboard() {
                     />
                     <div>
                         <Bell />
-                        <UserIcon />
+                        <UserIcon img='user'/>
                     </div>
                 </div>
                 <div className={styles.goals}>

@@ -8,7 +8,7 @@ const StatusUpdate = ({ update }) => {
     return (
         <div className={styles.container}>
             <div className={styles.userInfo}>
-                <UserIcon />
+                <UserIcon img={update.img} />
                 <div className={styles.userStatusInfo}>
                     <h6>{update.userName}</h6>
                     <p className={styles.date}>{update.date}</p>
