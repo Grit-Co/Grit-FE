@@ -1,10 +1,68 @@
 @import '../../../styles/global/palatte';
 
 .container {
-    border-top: 12px solid $off-white;
+    // border-top: 12px solid $off-white;
+    box-shadow: 0px 4px 30px rgb(0 0 0 / 10%);
+    margin-top: 20px;
 }
+
+.container h6 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    color: $main-black;
+    margin: 0 0 6px 0;
+
+}
+
+.userInfo {
+    padding: 20px 24px;
+    display: flex;
+}
+
+.userInfo .userStatusInfo {
+    margin-top: 21px;
+    margin-left: 16px;
+}
+
+.userInfo p {
+    margin: 0;
+}
+
+.container p {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    color: $dark-grey;
+    margin: 0;
+}
+
+.update p {
+    font-size: 14px;
+}
+
 .container .actionContainer {
     height: 44px;
     display: flex;
     border-top: 1px solid $medium-grey;
+}
+
+.col {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftCol {
+    border-right: solid 1px $light-grey;
+}
+
+.update {
+    margin-left: 78px;
+}
+
+.responses {
+    // margin-left: 78px;
+    margin: 20px 0 16px 78px;
 }

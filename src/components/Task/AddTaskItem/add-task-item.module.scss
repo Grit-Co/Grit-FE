@@ -1,6 +1,6 @@
 @import '../../../../styles/global/palatte';
 
-.taskItem {
+.addTaskItem {
     height: 54px;
     width: 100%;
     padding: 19px 18px 19px 16px;
@@ -12,4 +12,5 @@
     color: $main-black;
     font-size: 14px;
     line-height: 16px;
+    margin-top: 8px;
 }

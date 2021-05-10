@@ -1,3 +1,5 @@
+@import './global/palatte';
+
 .container {
     height: 100vh;
     display: flex;
@@ -7,6 +9,7 @@
 
 .container main {
     margin: 20px;
+    padding-bottom: 100px;
 }
 
 .container main .header {
@@ -27,4 +30,13 @@
 
 .goals .cardContainer {
     overflow-x: scroll;
+}
+
+.completedTasks {
+    margin-top: 30px;
+}
+
+.completedTasks p {
+    font-style: italic;
+    color: $dark-grey;
 }

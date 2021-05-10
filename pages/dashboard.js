@@ -7,6 +7,7 @@ import HorizontalDivider from '../src/components/decorators/HorizontalDivider'
 import FooterNav from '../src/components/FooterNav'
 import styles from '../styles/dashboard.module.scss'
 import TaskItem from '../src/components/Task/TaskItem'
+import AddTaskItem from '../src/components/Task/AddTaskItem'
 
 export default function Dashboard() {
     const exampleGoal = {
@@ -19,6 +20,16 @@ export default function Dashboard() {
     const exampleTask = {
         text: 'Interview',
         complete: false
+    }
+
+    const exampleTask2 = {
+        text: 'Work on portfolio',
+        complete: false
+    }
+
+    const completedTask = {
+        text: 'Interview',
+        complete: true
     }
 
     return (
@@ -44,6 +55,15 @@ export default function Dashboard() {
                 <div className={styles.tasks}>
                     <SectionHeader section='task' text="Today's Tasks" />
                     <TaskItem task={exampleTask}/>
+                    <TaskItem task={exampleTask2}/>
+                    <AddTaskItem />
+                </div>
+                <div className={styles.completedTasks}>
+                    <p>Completed Tasks</p>
+                    <TaskItem task={completedTask}/>
+                    <TaskItem task={completedTask}/>
+                    <TaskItem task={completedTask}/>
+                    <TaskItem task={completedTask}/>
                 </div>
             </main>
             <FooterNav />

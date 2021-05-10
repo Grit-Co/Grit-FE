@@ -1,8 +1,8 @@
 import styles from './add-task-item.module.scss'
 
-const AddTaskItem = ({ task }) => (
+const AddTaskItem = () => (
     <div className={styles.addTaskItem}>
-        {task.text}
+        + Task
     </div>
 );
 

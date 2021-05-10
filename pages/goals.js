@@ -17,6 +17,17 @@ export default function Goals() {
             title: 'Manage a team',
             dueDate: '12/15/22'
         }
+    ];
+
+    const completedGoals = [
+        {
+            title: 'Do a UX Bootcamp', 
+            dueDate: '1/3/21'
+        },
+        {
+            title: 'Find a career path',
+            dueDate: '12/15/22'
+        }
     ]
 
     return ( 
@@ -46,7 +57,12 @@ export default function Goals() {
                 <div className={styles.completedGoals}>
                     <SectionHeader section='completed-goals' text='Completed Goals' />
                     <Card 
-                        goal={exampleGoals[0]} 
+                        goal={completedGoals[0]} 
+                        fullCard={true}
+                        completed={true}
+                    />
+                    <Card 
+                        goal={completedGoals[1]} 
                         fullCard={true}
                         completed={true}
                     />
