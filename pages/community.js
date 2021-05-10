@@ -11,19 +11,23 @@ export default function Community() {
     const mockCommunities = [
         {
             title: "BizWomen",
-            description: "Women in the business world"
+            description: "Women in the business world",
+            img: 'biz'
         },
         {
             title: "Ceiling Breakers",
-            description: "Trying to break the glass ceiling, join us!"
+            description: "Trying to break the glass ceiling, join us!",
+            img: 'ceiling'
         },
         {
             title: "SoulSearchers",
-            description: "Women trying to switch careers"
+            description: "Women trying to switch careers",
+            img: 'soul'
         },
         {
             title: "ManagersRus",
-            description: "Support for managing teams"
+            description: "Support for managing teams",
+            img: 'managers'
         },
     ]
 
@@ -38,7 +42,7 @@ export default function Community() {
                 </div>
                 <SearchBar />
                 <SectionHeader section='pod' text='Your Communities' />
-                {mockCommunities.map(community => <Item title={community.title} description={community.description}/>)}
+                {mockCommunities.map(community => <Item title={community.title} description={community.description} img={community.img} />)}
             </main>
             <FooterNav />
         </div>

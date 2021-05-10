@@ -1,12 +1,14 @@
 import UserIcon from '../UserIcon'
 import styles from './item.module.scss'
 
-const Item = ({title, description}) => {
+const Item = ({title, description, img}) => {
 
   return (
     <div className={styles.container}>
         <div>
-          <UserIcon />
+          <UserIcon 
+              img={img}
+          />
         </div>
         <div>
           <h3>{ title }</h3>
