@@ -1,6 +1,9 @@
-import styles from '../../styles/components/navigation.module.scss'
-import Vector from '../icons/Vector'
-import Button from './Button'
+import React from 'react';
+
+// import Button from '../Button/Button'
+import Vector from '../../icons/Vector';
+
+import styles from './index.module.scss';
 
 export default function Setup() {
     return (

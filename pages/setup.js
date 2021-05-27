@@ -1,14 +1,13 @@
-import { useState } from 'react'
-import Step from '../src/components/Step'
-import Navigation from '../src/components/Navigation'
-import Button from '../src/components/Button'
-import ListItem from '../src/components/List/ListItem'
-import styles from '../styles/setup.module.scss'
-import Splash from '../src/templates/Splash'
+import React, { useState } from 'react';
+
+import Navigation from '../src/components/Navigation';
+import Step from '../src/components/Step';
+import Splash from '../src/templates/Splash';
+
+import styles from '../styles/pages/setup.module.scss';
 
 const Setup = () => {
     
-
     // TODO: Need some state to keep track of what step they are on
     const [currentStep, setCurrentStep] = useState(1);
 
@@ -19,7 +18,7 @@ const Setup = () => {
     }
 
     const handleBackClick = () => {
-        setCurrentStep(currentStep --)
+        setCurrentStep(currentStep - 1)
     }
 
     if (currentStep > 6) {
@@ -32,7 +31,8 @@ const Setup = () => {
                 <Navigation 
                     handleBackClick={handleBackClick}
                 /> 
-                <div className={styles.progress}>--------</div>
+                {/* TODO: Progress bar here */}
+                {/* <div className={styles.progress}>--------</div> */}
                
                 <Step 
                     step={currentStep} 

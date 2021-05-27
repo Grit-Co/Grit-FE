@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Kebab = ({ selected }) => (
     <svg width="23" height="4" viewBox="0 0 23 4" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M11.4168 3.16669C11.831 3.16669 12.1668 2.8309 12.1668 2.41669C12.1668 2.00247 11.831 1.66669 11.4168 1.66669C11.0026 1.66669 10.6668 2.00247 10.6668 2.41669C10.6668 2.8309 11.0026 3.16669 11.4168 3.16669Z" fill={ selected ? "#6B4EFF" : "#B4B6B8" }/>
@@ -11,3 +14,7 @@ const Kebab = ({ selected }) => (
 )
 
 export default Kebab;
+
+Kebab.propTypes = {
+    selected: PropTypes.bool
+};

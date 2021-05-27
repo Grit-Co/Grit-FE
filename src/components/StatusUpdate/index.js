@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import styles from './status-update.module.scss'
 import ThumbsUp from '../../icons/ThumbsUp'
 import Message from '../../icons/Message'
@@ -35,3 +38,7 @@ const StatusUpdate = ({ update }) => {
 }
 
 export default StatusUpdate;
+
+StatusUpdate.propTypes = {
+    update: PropTypes.object
+};

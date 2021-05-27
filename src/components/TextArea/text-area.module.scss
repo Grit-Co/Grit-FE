@@ -1,0 +1,18 @@
+@import '../../../styles/global/palatte';
+
+.textArea {
+    width: 100%;
+    min-height: 168px;
+    border: 1px solid $light-grey;
+    border-radius: 8px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 21px 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.textArea:focus-visible {
+    outline: $light-grey auto 1px;
+}

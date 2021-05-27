@@ -1,5 +1,8 @@
-import styles from './user-icon.module.scss'
-import Image from 'next/image'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Image from 'next/image';
+
+import styles from './user-icon.module.scss';
 
 const UserIcon = ({ img }) => (
     <div className={styles.userIcon}>
@@ -13,3 +16,7 @@ const UserIcon = ({ img }) => (
 );
 
 export default UserIcon; 
+
+UserIcon.propTypes = {
+    img: PropTypes.string
+};

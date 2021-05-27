@@ -1,4 +1,4 @@
-@import '../styles/global/palatte';
+@import '../global/palatte';
 
 .container {
     height: 100vh;
@@ -9,6 +9,7 @@
 
 .container main {
     margin: 20px;
+    padding-bottom: 100px;
 }
 
 .container main .header {

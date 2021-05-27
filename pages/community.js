@@ -1,10 +1,13 @@
-import FooterNav from '../src/components/FooterNav'
+import React from 'react';
+import FooterNav from '../src/components/FooterNav';
 import Item from '../src/components/Item';
-import Plus from '../src/icons/Plus'
-import SearchBar from '../src/components/SearchBar'
-import SectionHeader from '../src/components/SectionHeader'
+import Plus from '../src/icons/Plus';
+import SearchBar from '../src/components/SearchBar';
+import SectionHeader from '../src/components/SectionHeader';
 import Title from '../src/components/Title';
-import styles from '../styles/community.module.scss'
+
+import styles from '../styles/pages/community.module.scss';
+
 
 export default function Community() {
 
@@ -41,8 +44,15 @@ export default function Community() {
                     </div>
                 </div>
                 <SearchBar />
-                <SectionHeader section='pod' text='Your Communities' />
-                {mockCommunities.map(community => <Item title={community.title} description={community.description} img={community.img} />)}
+                <SectionHeader section='community' text='Your Communities' />
+                {mockCommunities.map(community => 
+                    <Item 
+                        key={community.title}
+                        title={community.title} 
+                        description={community.description} 
+                        img={community.img} 
+                    />
+                )}
             </main>
             <FooterNav />
         </div>

@@ -1,6 +1,7 @@
-import styles from './splash.module.scss'
-import Link from 'next/link'
-import Button from '../components/Button'
+import React from 'react';
+import styles from './splash.module.scss';
+import Link from 'next/link';
+import Button from '../components/Button/Button';
 
 const Splash = () => {
 
@@ -20,9 +21,9 @@ const Splash = () => {
             </h3>
 
             <Link
-              href='/setup'
+              href='/dashboard'
             >
-              <a className={styles['primary-link']}>Plan Goal</a>
+              <a className={styles['primary-link']}>Get Started</a>
             </Link>
             <Button 
               text='Skip'

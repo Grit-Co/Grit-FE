@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import styles from '../../styles/Button.module.scss';
 
 const Button = ({ 
@@ -19,3 +22,9 @@ const Button = ({
 );
 
 export default Button;
+
+Button.propTypes = {
+    text: PropTypes.string,
+    onClick: PropTypes.func, 
+    isPrimary: PropTypes.bool
+}

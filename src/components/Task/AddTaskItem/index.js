@@ -1,4 +1,6 @@
-import styles from './add-task-item.module.scss'
+import React from 'react';
+
+import styles from './add-task-item.module.scss';
 
 const AddTaskItem = () => (
     <div className={styles.addTaskItem}>

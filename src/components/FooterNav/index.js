@@ -1,12 +1,15 @@
-import Chat from '../icons/Chat'
-import Home from '../icons/Home'
-import Kebab from '../icons/Kebab'
-import NavItem from './NavItem'
-import NavLink from './NavLink'
-import Star from '../icons/Star'
-import Users from '../icons/Users'
-import styles from '../../styles/components/footernav.module.scss'
-import { useRouter } from 'next/router'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { useRouter } from 'next/router';
+import Home from '../../icons/Home';
+import Kebab from '../../icons/Kebab';
+import NavItem from '../Navigation/NavItem';
+import NavLink from '../Navigation/NavLink';
+import Star from '../../icons/Star';
+import Users from '../../icons/Users';
+import Pod from '../../icons/Pod';
+
+import styles from './index.module.scss';
 
 const FooterNav = ({ handleTabSelect }) => {
     const router = useRouter()
@@ -18,7 +21,7 @@ const FooterNav = ({ handleTabSelect }) => {
             case 'goals':
                 return <Star selected={currentTab === tab} />
             case 'pod':
-                return <Chat selected={currentTab === tab} />
+                return <Pod selected={currentTab === tab} />
             case 'community':
                 return <Users selected={currentTab === tab} />
             case 'more':
@@ -62,7 +65,12 @@ const FooterNav = ({ handleTabSelect }) => {
                 tabs.map(tab => {
                     const icon = setIconComponent(tab.tab)
                     return (
-                        <NavItem text={tab.text} selected={currentTab === tab.tab} handleTabSelect={handleTabSelect}>
+                        <NavItem 
+                            text={tab.text} 
+                            selected={currentTab === tab.tab} 
+                            handleTabSelect={handleTabSelect}
+                            key={tab.text}
+                        >
                             <NavLink href={tab.tab}>
                                 {icon}
                             </NavLink>
@@ -75,3 +83,7 @@ const FooterNav = ({ handleTabSelect }) => {
 };
 
 export default FooterNav;
+
+FooterNav.propTypes = {
+    handleTabSelect: PropTypes.func
+};

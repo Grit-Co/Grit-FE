@@ -1,8 +1,11 @@
+
+import React from 'react';
+
 import Search from '../../icons/Search'
 import Voice from '../../icons/Voice'
 import styles from './search.module.scss'
 
-const SearchBar = ({ props }) => {
+const SearchBar = () => {
 
     return (
         <div className={styles.row}>

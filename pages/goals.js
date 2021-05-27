@@ -1,16 +1,17 @@
-import styles from '../styles/goals.module.scss'
+import React from 'react';
+import Calendar from '../src/icons/Calendar';
+import Card from '../src/components/Card/Card';
+import FooterNav from '../src/components/FooterNav';
+import Plus from '../src/icons/Plus';
+import SectionHeader from '../src/components/SectionHeader';
 import Title from '../src/components/Title';
-import SectionHeader from '../src/components/SectionHeader'
-import Card from '../src/components/Card/Card'
-import FooterNav from '../src/components/FooterNav'
-import Calendar from '../src/icons/Calendar'
-import Plus from '../src/icons/Plus'
 
+import styles from '../styles/pages/goals.module.scss';
 
 export default function Goals() {
     const exampleGoals = [
         {
-            title: 'Find a new job', 
+            title: 'Find a new job',
             dueDate: '5/5/22'
         },
         {
@@ -21,14 +22,14 @@ export default function Goals() {
 
     const completedGoals = [
         {
-            title: 'Do a UX Bootcamp', 
+            title: 'Do a UX Bootcamp',
             dueDate: '1/3/21'
         },
         {
             title: 'Find a career path',
             dueDate: '12/15/22'
         }
-    ]
+    ];
 
     return ( 
         <div className={styles.container}>

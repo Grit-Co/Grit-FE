@@ -1,4 +1,7 @@
-import styles from './welcome-title.module.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './welcome-title.module.scss';
 
 const WelcomeTitle = ({ user }) => {
     // Todo: Randomize this
@@ -13,4 +16,8 @@ const WelcomeTitle = ({ user }) => {
     );
 }
 
-export default WelcomeTitle; 
+export default WelcomeTitle;
+
+WelcomeTitle.propTypes = {
+    user: PropTypes.string
+};

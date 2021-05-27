@@ -1,4 +1,8 @@
-import styles from './title.module.scss'
+
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './title.module.scss';
 
 const Title = ({ text }) => {
     
@@ -9,4 +13,8 @@ const Title = ({ text }) => {
     );
 }
 
-export default Title; 
+export default Title;
+
+Title.propTypes = {
+    text: PropTypes.string
+};

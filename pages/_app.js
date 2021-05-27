@@ -1,7 +1,8 @@
 import React from 'react';
 import { UserProvider } from '@auth0/nextjs-auth0';
-  
-import '../styles/globals.css'
+import PropTypes from 'prop-types';
+
+import '../styles/global/globals.scss'
 
 export default function App({ Component, pageProps }) {
   return (
@@ -10,3 +11,8 @@ export default function App({ Component, pageProps }) {
       </UserProvider>
   );
 }
+
+App.propTypes = {
+  Component: PropTypes.any, 
+  pageProps: PropTypes.any
+};

@@ -1,0 +1,14 @@
+@import '../../../../styles/global/palatte';
+
+.listItem {
+    text-decoration: none;
+    margin: 12px 0;
+    padding: 12px;
+    background-color: $light-grey;
+    border-radius: 8px;
+}
+
+.selected {
+    background-color: $purple;
+    color: $white;
+}

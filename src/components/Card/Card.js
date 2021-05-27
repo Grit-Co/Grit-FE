@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './card.module.scss'
 
 // TODO: this card should be more generic, not just for goals etc
@@ -52,3 +54,9 @@ const Card = ({ goal, fullCard, completed }) => {
 }
 
 export default Card; 
+
+Card.propTypes = {
+    goal: PropTypes.object,
+    fullCard: PropTypes.bool,
+    completed: PropTypes.bool  
+};

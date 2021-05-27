@@ -1,7 +1,10 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import UserIcon from '../UserIcon'
 import styles from './item.module.scss'
 
-const Item = ({title, description, img}) => {
+const Item = ({ title, description, img }) => {
 
   return (
     <div className={styles.container}>
@@ -19,3 +22,9 @@ const Item = ({title, description, img}) => {
 }
 
 export default Item;
+
+Item.propTypes = {
+  title: PropTypes.string, 
+  description: PropTypes.string, 
+  img: PropTypes.string
+};

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import styles from './horizontal-divider.module.scss'
 
 const HorizontalDivider = () => (

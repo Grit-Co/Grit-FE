@@ -1,3 +1,7 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Pea from '../../icons/Pea'
 import styles from './section-header.module.scss'
 
 const SectionHeader = ({ section, text }) => {
@@ -5,15 +9,25 @@ const SectionHeader = ({ section, text }) => {
         'goal' : '🌟',
         'completed-goals': '🏆',
         'task' : '📝',
-        'pod': '👥'
+        'community': '👥'
     };
     
     return (
         <h1 className={styles.sectionHeader}>
-            <span>{emojis[section]}</span>
+            <span>{
+                section != 'pod' ? 
+                    emojis[section]
+                    :
+                    <Pea />
+            }</span>
             {text}
         </h1>
     );
 }
 
 export default SectionHeader; 
+
+SectionHeader.propTypes = {
+    section: PropTypes.string, 
+    text: PropTypes.string
+};
