@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 // import Button from '../Button/Button'
-import Vector from '../../icons/Vector';
+import Vector from "../../icons/Vector";
 
-import styles from './index.module.scss';
+import styles from "./index.module.scss";
 
 export default function Setup() {
     return (
         <nav className={styles.navbar}>
-        <Vector />
+            <Vector />
             <h3>Set Goal</h3>
             {/* <Button
                 text='Skip'
@@ -16,5 +16,5 @@ export default function Setup() {
             /> */}
             <p>Skip</p>
         </nav>
-    )
+    );
 }

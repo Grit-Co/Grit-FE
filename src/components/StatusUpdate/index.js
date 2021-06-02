@@ -1,13 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import styles from './status-update.module.scss'
-import ThumbsUp from '../../icons/ThumbsUp'
-import Message from '../../icons/Message'
-import UserIcon from '../UserIcon'
+import styles from "./status-update.module.scss";
+import ThumbsUp from "../../icons/ThumbsUp";
+import Message from "../../icons/Message";
+import UserIcon from "../UserIcon";
 
 const StatusUpdate = ({ update }) => {
-
     return (
         <div className={styles.container}>
             <div className={styles.userInfo}>
@@ -30,12 +29,11 @@ const StatusUpdate = ({ update }) => {
                 </div>
                 <div className={`${styles.rightCol} ${styles.col}`}>
                     <Message />
-
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default StatusUpdate;
 

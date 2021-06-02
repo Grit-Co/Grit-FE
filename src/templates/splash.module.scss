@@ -1,41 +1,41 @@
-@import '../../styles/global/palatte';
+@import "../../styles/global/palatte";
 
 .container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: $main-black;
-  background-color: $pink;
-  text-align: center;
+    min-height: 100vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $main-black;
+    background-color: $pink;
+    text-align: center;
 }
 
 .main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    padding: 5rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer {
-  width: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer p {
-  width: 100%;
+    width: 100%;
 }
 
 .main a {
-  text-decoration: none;
-    background: #6B4EFF;
-    color: #FFFFFF;
+    text-decoration: none;
+    background: #6b4eff;
+    color: #ffffff;
     border-radius: 48px;
     height: 48px;
     display: flex;
@@ -49,42 +49,40 @@
 }
 
 .main h1 {
-  color: $main-black;
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 36px;
-  padding: 22px 42px;
+    color: $main-black;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    padding: 22px 42px;
 }
 
 .title span {
-  color: $purple;
+    color: $purple;
 }
 
 .main h3 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  margin-bottom: 56px;
-  text-align: center;
-  padding: 0 75px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 56px;
+    text-align: center;
+    padding: 0 75px;
 }
 
 .title {
-  margin: 0;
+    margin: 0;
 }
 
 .title,
 .description {
-  text-align: center;
+    text-align: center;
 }
 
 .description {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  margin-bottom: 80px;
-  padding: 0 28px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 80px;
+    padding: 0 28px;
 }
-
-

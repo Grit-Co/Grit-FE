@@ -1,15 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
-const NavLink = ({ children ,href }) => {
-    const router = useRouter()
-    return(
-        <div  onClick={() => router.push(href)}>
-            {children}
-        </div>
-    )
+const NavLink = ({ children, href }) => {
+    const router = useRouter();
+    return <div onClick={() => router.push(href)}>{children}</div>;
 };
 
 export default NavLink;

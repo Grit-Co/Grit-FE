@@ -1,4 +1,4 @@
-@import '../../../styles/global/palatte';
+@import "../../../styles/global/palatte";
 
 .container {
     display: flex;
@@ -49,7 +49,7 @@
 }
 
 .goalContainer p {
-    color: $main-black; 
+    color: $main-black;
     font-weight: bold;
     font-size: 14px;
     line-height: 16px;
@@ -80,7 +80,7 @@
     margin-top: 8px;
 }
 
-.fullMilestoneContainer div{
+.fullMilestoneContainer div {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
