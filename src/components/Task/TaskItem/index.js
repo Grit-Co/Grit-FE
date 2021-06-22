@@ -17,6 +17,6 @@ const TaskItem = ({ task, handleClick }) => (
 export default TaskItem;
 
 TaskItem.propTypes = {
-    task: PropTypes.string,
+    task: PropTypes.object,
     handleClick: PropTypes.func
 };

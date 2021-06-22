@@ -31,9 +31,10 @@
 
 .footer p {
     width: fit-content;
+    margin-right: 10px;
 }
 
-.main a {
+.main .primaryBtn {
     text-decoration: none;
     background: $purple;
     color: $white;

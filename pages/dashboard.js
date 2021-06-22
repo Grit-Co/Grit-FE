@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useUser } from "@auth0/nextjs-auth0";
 
 import AddTaskItem from "../src/components/Task/AddTaskItem";
 import Bell from "../src/icons/Bell";
@@ -13,12 +14,13 @@ import WelcomeTitle from "../src/components/WelcomeTitle";
 import styles from "../styles/pages/dashboard.module.scss";
 
 export default function Dashboard() {
+    const { user } = useUser(); 
+    console.log('user: ', user);
+
     const exampleGoal = {
         title: "Find a new job",
         dueDate: "5/5/22"
     };
-
-    const exampleUser = "Lisa";
 
     const [mockedTasks, setMockedTasks] = useState([
         {
@@ -54,7 +56,7 @@ export default function Dashboard() {
         <div className={styles.container}>
             <main>
                 <div className={styles.header}>
-                    <WelcomeTitle user={exampleUser} />
+                    <WelcomeTitle user={user.name || ''} />
                     <div>
                         <Bell />
                         <UserIcon img="user" />
@@ -71,7 +73,7 @@ export default function Dashboard() {
                         .filter((task) => !task.complete)
                         .map((task) => (
                             <TaskItem
-                                key={task}
+                                key={task.text}
                                 task={task}
                                 handleClick={onTaskClick}
                             />
@@ -84,7 +86,7 @@ export default function Dashboard() {
                         .filter((task) => task.complete === true)
                         .map((task) => (
                             <TaskItem
-                                key={task}
+                                key={task.text}
                                 task={task}
                                 handleClick={onTaskClick}
                             />

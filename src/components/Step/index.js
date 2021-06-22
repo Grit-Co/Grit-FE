@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import Button from "../Button/Button";
@@ -6,40 +6,46 @@ import ListItem from "../List/ListItem/ListItem";
 import styles from "./step.module.scss";
 import TextArea from "../TextArea";
 
-const Step = ({ step, handleNextClick }) => {
+const Step = ({ step, handleNextClick, setGoalType }) => {
     const stepObj = {
         1: {
             title: "Let's start by choosing a category...",
             cta: "Select",
-            percentage: "seventeen"
+            percentage: "seventeen",
+            name: "goalCategory"
         },
         2: {
             title: "Tell us about your goal.",
             placeholder: "What would you like to accomplish?",
             cta: "Next",
-            percentage: "thirtyThree"
+            percentage: "thirtyThree",
+            name: "goalDetails"
         },
         3: {
             title: "Why is this goal important to you?",
             placeholder: "Why does this matter to you?",
             cta: "Next",
-            percentage: "fifty"
+            percentage: "fifty",
+            name: "goalPurpose"
         },
         4: {
             title: "What does success look like?",
             placeholder: "How will you know when you have reached your goal?",
             cta: "Next",
-            percentage: "sixtySeven"
+            percentage: "sixtySeven",
+            name: "successDefinition"
         },
         5: {
             title: "What might prevent you from achieving your goal?",
             cta: "Next",
-            percentage: "eightyThree"
+            percentage: "eightyThree",
+            name: "goalBlockers"
         },
         6: {
             title: "When are you going to reach this goal by?",
             cta: "Save",
-            percentage: "hundred"
+            percentage: "hundred",
+            name: "goalDueDate"
         }
     };
 
@@ -83,18 +89,22 @@ const Step = ({ step, handleNextClick }) => {
         });
 
         setCategories(updatedCategories);
+        setGoalType(clickedCategory);
+    };
+
+    const handleTextAreaChange = (e) => {
+        setCurrentValue(e.target.value);
     };
 
     const resetCurrentValue = () => {
         setCurrentValue("");
-        handleNextClick();
+        handleNextClick(stepObj[step].name, currentValue);
     };
 
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <div className={styles.barContainer}>
-                    {/* <div className={styles.grey}></div> */}
                     <div
                         className={`${styles.status} ${
                             styles[stepObj[step].percentage]
@@ -118,7 +128,8 @@ const Step = ({ step, handleNextClick }) => {
                     <TextArea
                         placeholder={stepObj[step].placeholder}
                         value={currentValue}
-                        handleChange={setCurrentValue}
+                        name={stepObj[step].name}
+                        handleChange={(e) => handleTextAreaChange(e)}
                     />
                 )}
             </div>
@@ -133,6 +144,6 @@ const Step = ({ step, handleNextClick }) => {
 export default Step;
 
 Step.propTypes = {
-    step: PropTypes.string,
+    step: PropTypes.number,
     handleNextClick: PropTypes.func
 };

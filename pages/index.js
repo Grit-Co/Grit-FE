@@ -2,11 +2,9 @@ import React from "react";
 import { useUser } from "@auth0/nextjs-auth0";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-
-import Button from "../src/components/Button/Button";
 
 import styles from "../styles/pages/home.module.scss";
+import StyledLink from "../src/components/StyledLink";
 
 export default function Home() {
     const { user, error, isLoading } = useUser();
@@ -41,10 +39,19 @@ export default function Home() {
 
                         <h3>Are you ready to set your first goal?</h3>
 
-                        <Link href="/setup">
+                        {/* <Link href="/setup">
                             <a className={styles["primary-link"]}>Set Goal</a>
-                        </Link>
-                        <Button text="Skip" isPrimary={false} />
+                        </Link> */}
+                        <StyledLink 
+                            isPrimary={true}
+                            text="Set Goal"
+                            href="/setup"
+                        />
+                        <StyledLink 
+                            isPrimary={false}
+                            text="Skip"
+                            href="/dashboard"
+                        />
                     </main>
                 ) : (
                     <main className={styles.main}>
@@ -58,7 +65,7 @@ export default function Home() {
                             width={500}
                             height={500}
                         />
-                        <a href="/api/auth/login">Login</a>
+                        <a className={styles.primaryBtn} href="/api/auth/login">Login</a>
                         <div className={styles.footer}>
                             <p>{"Don't have an account?"}</p>
                             <a href="/api/auth/login">Sign Up</a>

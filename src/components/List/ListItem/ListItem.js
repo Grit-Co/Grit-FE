@@ -17,7 +17,7 @@ const ListItem = ({ children, selected, handleClick }) => (
 export default ListItem;
 
 ListItem.propTypes = {
-    children: PropTypes.object,
+    children: PropTypes.string,
     selected: PropTypes.bool,
     handleClick: PropTypes.func
 };

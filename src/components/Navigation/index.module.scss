@@ -1,4 +1,4 @@
-@import "../global/palatte";
+@import "../../../styles/global/palatte";
 
 .navbar {
     height: 48px;
@@ -14,8 +14,6 @@
 }
 
 .navbar p {
-    font-family: Inter;
-    font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 18px;

@@ -1,6 +1,6 @@
 import React from "react";
+import Link from "next/link";
 
-// import Button from '../Button/Button'
 import Vector from "../../icons/Vector";
 
 import styles from "./index.module.scss";
@@ -10,11 +10,12 @@ export default function Setup() {
         <nav className={styles.navbar}>
             <Vector />
             <h3>Set Goal</h3>
-            {/* <Button
-                text='Skip'
-                isPrimary={false}
-            /> */}
-            <p>Skip</p>
+            {/* <p>Skip</p> */}
+            <Link
+                href="/dashboard"
+            >
+                <p>Skip</p>
+            </Link>
         </nav>
     );
 }
